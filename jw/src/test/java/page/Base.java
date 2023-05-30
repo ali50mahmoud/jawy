@@ -17,10 +17,15 @@ import java.time.Duration;
 
 public class Base {
 	
-	public  void takescreenshot(String name) throws IOException {
-		File srcfile=((TakesScreenshot)Hooks.driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(srcfile, new File(System.getProperty("user.dir")+"\\TestReport\\"+name+".png"));
-
+	public void captureScreenshot( String screenshotName) {
+	    try {
+	        TakesScreenshot ts = (TakesScreenshot) Hooks.driver;
+	        File source = ts.getScreenshotAs(OutputType.FILE);
+	        FileUtils.copyFile(source, new File("screenshots/" + screenshotName + ".png"));
+	        System.out.println("Screenshot captured: " + screenshotName);
+	    } catch (Exception e) {
+	        System.out.println("Failed to capture screenshot: " + e.getMessage());
+	    }
 	}
 		
 

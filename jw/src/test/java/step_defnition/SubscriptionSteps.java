@@ -21,10 +21,10 @@ public class SubscriptionSteps {
 
 	@When("I validate the Subscription Packages for country {string}")
 	public void validateSubscriptionPackages(String country) throws InterruptedException, IOException {
-
+		base.captureScreenshot("screenshot1");
 		base.SelectServeces(country);
 		
-		base. takescreenshot("JW_screenshot");
+		base.captureScreenshot("screenshot1");
 
 	}
 
