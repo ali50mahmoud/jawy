@@ -22,8 +22,8 @@ public class Base {
 		FileUtils.copyFile(srcfile, new File(System.getProperty("user.dir")+"\\TestReport\\"+name+".png"));
 
 	}
+		
 
-	// *****************************************wait element to be clickbale
 	// *************************************************//
 	public static void waitclickable(By element) {
 		new WebDriverWait(Hooks.driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(element));
@@ -40,17 +40,10 @@ public class Base {
 	public static By eg = By.xpath("//a[@id='eg']");
 	public static By jr = By.xpath("//a[@id='jo']");
 
-//	public static By Type = By.xpath("//h4[.='CLASSIC']");
-//	public static By Price = By.xpath("//b[.='7.00']");
-//	public static By Currency = By.xpath("//div[.='From 7.00 Egyptian pound/month']");
 
 	public void SelectServeces(String country) throws InterruptedException, IOException {
-//		final By select = By.xpath("//span[@id='arrow']");
-//		JavascriptExecutor js = (JavascriptExecutor) Hooks.driver;
-//		new WebDriverWait(Hooks.driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(select));
-//		js.executeScript("arguments[0].click()", Hooks.driver.findElement(select));
 
-		// hit_select
+		
 		Thread.sleep(1000);
 		final By select = By.xpath("//span[@id='arrow']");
 		Thread.sleep(1000);
