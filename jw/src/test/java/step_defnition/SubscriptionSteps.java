@@ -2,6 +2,8 @@ package step_defnition;
 
 
 
+import java.io.IOException;
+
 import io.cucumber.datatable.DataTable; 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -18,9 +20,11 @@ public class SubscriptionSteps {
 	}
 
 	@When("I validate the Subscription Packages for country {string}")
-	public void validateSubscriptionPackages(String country) throws InterruptedException {
+	public void validateSubscriptionPackages(String country) throws InterruptedException, IOException {
 
 		base.SelectServeces(country);
+		
+		base. takescreenshot("JW_screenshot");
 
 	}
 
